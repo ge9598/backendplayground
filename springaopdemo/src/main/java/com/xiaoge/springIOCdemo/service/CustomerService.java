@@ -1,5 +1,6 @@
-package com.xiaoge.springaopdemo.service;
+package com.xiaoge.springIOCdemo.service;
 
+import com.xiaoge.springIOCdemo.aop.TimeUsed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -25,7 +26,7 @@ public class CustomerService {
 //    public void setNotificationService(NotificationService notificationService) {
 //        this.notificationService = notificationService;
 //    }
-
+    @TimeUsed
     public void register(){
 
         notificationService.sendNotification("Congrats on successfully send notification!");

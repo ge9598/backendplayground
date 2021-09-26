@@ -1,6 +1,6 @@
-package com.xiaoge.springaopdemo;
+package com.xiaoge.springIOCdemo;
 
-import com.xiaoge.springaopdemo.service.CustomerService;
+import com.xiaoge.springIOCdemo.service.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

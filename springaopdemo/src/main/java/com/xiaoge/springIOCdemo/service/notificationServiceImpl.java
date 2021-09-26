@@ -1,4 +1,4 @@
-package com.xiaoge.springaopdemo.service;
+package com.xiaoge.springIOCdemo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

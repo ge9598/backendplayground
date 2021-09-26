@@ -1,13 +1,12 @@
-package com.xiaoge.springaopdemo;
+package com.xiaoge.springIOCdemo;
 
 
-import com.xiaoge.springaopdemo.service.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class SpringaopdemoApplication {
 
 

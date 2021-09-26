@@ -1,4 +1,4 @@
-package com.xiaoge.springaopdemo.service;
+package com.xiaoge.springIOCdemo.service;
 
 public interface NotificationService {
 
