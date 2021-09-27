@@ -19,7 +19,8 @@ public class SpringanootationApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Coach c = ac.getBean(Coach.class,"thatCoach");
+        Coach c = ac.getBean("thatCoach", Coach.class);
         System.out.println(c.getDailyWorkout());
+        System.out.println(c.getDailyFortune());
     }
 }

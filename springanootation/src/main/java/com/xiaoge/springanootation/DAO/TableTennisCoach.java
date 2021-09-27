@@ -1,29 +1,20 @@
 package com.xiaoge.springanootation.DAO;
 
-
 import com.xiaoge.springanootation.Service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("thatCoach")
-public class TennisCoach implements Coach {
+@Component
+public class TableTennisCoach implements Coach{
+
     @Autowired
     @Qualifier("happyFortuneService")
     private FortuneService fortuneService;
 
-//    public void setFortuneService(FortuneService fortuneService) {
-//        this.fortuneService = fortuneService;
-//    }
-//
-//    public TennisCoach(FortuneService fortuneService) {
-//        this.fortuneService = fortuneService;
-//    }
-//
     @Override
     public String getDailyWorkout() {
-        return "Practice the backhand";
-
+        return "pingpong number one!";
     }
 
     @Override
