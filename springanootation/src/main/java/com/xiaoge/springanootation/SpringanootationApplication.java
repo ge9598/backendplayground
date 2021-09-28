@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SpringanootationApplication implements CommandLineRunner {
@@ -22,5 +23,6 @@ public class SpringanootationApplication implements CommandLineRunner {
         Coach c = ac.getBean("thatCoach", Coach.class);
         System.out.println(c.getDailyWorkout());
         System.out.println(c.getDailyFortune());
+        ((ConfigurableApplicationContext)ac).close();
     }
 }
