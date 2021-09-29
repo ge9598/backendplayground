@@ -1,6 +1,7 @@
 package com.xiaoge.springanootation;
 
 import com.xiaoge.springanootation.DAO.Coach;
+import com.xiaoge.springanootation.DAO.TableTennisCoach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,9 +21,11 @@ public class SpringanootationApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Coach c = ac.getBean("thatCoach", Coach.class);
+        TableTennisCoach c = ac.getBean("tableTennisCoach", TableTennisCoach.class);
         System.out.println(c.getDailyWorkout());
         System.out.println(c.getDailyFortune());
+        System.out.println(c.getEmail());
+        System.out.println(c.getName());
         ((ConfigurableApplicationContext)ac).close();
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 
 
-@Service //@Component //@ Controller // @Repository
+@Service //@Component //@Controller // @Repository
 @Scope("prototype")
 public class CustomerService {
     //To complete dependency Injection
