@@ -6,9 +6,10 @@
 </head>
 <body>
     <h2>This is Main Menu</h2>
-    <form action="#" th:action="@{/greeting}" th:object="${user}" method="post">
-        <label>UserName: </label><input type="text" th:field="*{username}" >
-        <label>Password: </label><input type="password" th:field="*{password}">
+
+    <form action="#" th:action="@{/greetingV2}" th:object="${user}" method="post">
+        <label>UserName: </label><input type="text" name="username" th:field="*{username}" >
+        <label>Password: </label><input type="password" name="password" th:field="*{password}">
         <input type="submit" value="OK">
     </form>
 </body>

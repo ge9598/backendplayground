@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
@@ -30,13 +31,27 @@ public class HomeController {
 
 
     @PostMapping ("/greeting")
-    public String greeting(@RequestParam(name="name", required = false, defaultValue = "world")String name, User user, Model model, HttpServletResponse httpServletResponse){
+    public String greeting(@RequestParam(name="name", required = false, defaultValue = "world")String name, User user,
+                           Model model, HttpServletResponse httpServletResponse){
         if(validate(user.getUsername(), user.getPassword())){
             model.addAttribute("name", name);
             model.addAttribute("user", user);
             return "greeting";
         }
         return "error";
+
+    }
+    @PostMapping ("/greetingV2")
+    //For some reason, requestParam is getting both th params and name = params. Even though username and password is part of user
+    public String greetingV2(@RequestParam(name="username") String name, @RequestParam("password") String password,
+                             Model model){
+
+            model.addAttribute("name", name);
+            model.addAttribute("password", password);
+            System.out.println(name + " " + password);
+            return "greetingV2";
+
+
 
     }
 
