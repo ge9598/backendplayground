@@ -6,7 +6,12 @@
 </head>
 <body>
 <h1>Result</h1>
+<div class="row view-area" th:if="${customer}">
+    <ul th:each="c : ${customer}">
+        <li th:text="${c}"></li>
 
-<a href="/greeting">Submit another message</a>
+    </ul>
+</div>
+<a href="/">Submit another message</a>
 </body>
 </html>

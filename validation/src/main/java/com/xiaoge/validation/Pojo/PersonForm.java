@@ -6,11 +6,11 @@ import javax.validation.constraints.Size;
 
 public class PersonForm {
 
-    @NotNull
+    @NotNull(message = "this field must not be null")
     @Size(min=2, max=30)
     private String name;
 
-    @NotNull
+    @NotNull(message = "this field must not be null")
     @Min(18)
     private Integer age;
 
