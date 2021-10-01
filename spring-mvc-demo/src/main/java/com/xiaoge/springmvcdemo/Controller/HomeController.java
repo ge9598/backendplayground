@@ -7,10 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,10 +28,9 @@ public class HomeController {
 
 
     @PostMapping ("/greeting")
-    public String greeting(@RequestParam(name="name", required = false, defaultValue = "world")String name, User user,
-                           Model model, HttpServletResponse httpServletResponse){
+    public String greeting(@RequestParam(name="name", required = false, defaultValue = "world")String name,  User user,
+                           Model model){
         if(validate(user.getUsername(), user.getPassword())){
-            model.addAttribute("name", name);
             model.addAttribute("user", user);
             return "greeting";
         }
