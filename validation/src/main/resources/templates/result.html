@@ -1,2 +1,13 @@
-<h2>sign up successful!!</h2>
-<h3>The User's Name is: ${Cusomter}</h3>
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'FirstName: ' + ${customer.firstName}" />
+<p th:text="'LastName: ' + ${customer.lastName}" />
+<a href="/greeting">to Greeting page</a>
+</body>
+</html>

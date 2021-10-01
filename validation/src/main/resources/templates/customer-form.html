@@ -6,11 +6,11 @@
 </head>
 <body>
     <h1>Form</h1>
-    <form action="#" th:action="@{/}"method="post">
+    <form action="#"th:action="@{/}" th:object="${customer}" method="post">
         <p>FirstName: <input type="text" th:field="*{firstName}" name="firstName"/></p>
-        <p th:if="${#fields.hasErrors('firstName')}" th:errors="*firstName">FirstName</p>
-        <p>LastName: <input type="text" name="*{lastName}"/></p>
-        <p th:if="${#fields.hasErrors('lastName')}" th:errors="*lastName">lastName</p>
+        <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">FirstName</p>
+        <p>LastName: <input type="text"  th:field="*{lastName}" name="lastName"/></p>
+        <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">lastName</p>
 
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
