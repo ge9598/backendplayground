@@ -1,5 +1,6 @@
 package com.xiaoge.validation.Pojo;
 
+import com.xiaoge.validation.Validation.SerialCode;
 import lombok.Data;
 
 import javax.validation.constraints.*;
@@ -11,4 +12,7 @@ public class Customer {
     private String firstName;
     @NotBlank(message = "this field may not be empty!")
     private String lastName;
+
+    @SerialCode
+    private String serialCode;
 }
