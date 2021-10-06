@@ -1,4 +1,4 @@
-package POJO;
+package com.xiaoge.hibernateexample.POJO;
 
 import lombok.Data;
 
