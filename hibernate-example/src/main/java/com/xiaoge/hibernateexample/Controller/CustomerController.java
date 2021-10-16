@@ -46,5 +46,32 @@ public class CustomerController {
     public ResponseEntity<Iterable<Customer>> getCustomerAll(){
         return new ResponseEntity<Iterable<Customer>>( customerRepository.findAll(), HttpStatus.OK);
     }
+    @PutMapping()
+    public ResponseEntity<Customer> updateCustomerById(@RequestParam(value = "id") String id, @RequestParam(required = false) String firstName,
+                                                       @RequestParam(required = false) String lastName, @RequestParam(required = false) String email){
+        Customer c = customerRepository.findCustomerById(id);
+        if(c == null){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }else{
+            if(firstName != null)
+                c.setFirstName(firstName);
+            if(lastName != null)
+                c.setLastName(lastName);
+            if(email != null)
+                c.setEmail(email);
+        }
+        customerRepository.save(c);
+        return new ResponseEntity<>(c, HttpStatus.OK);
+    }
+    @DeleteMapping
+    public ResponseEntity<String> deleteCustomerById(@RequestParam(value = "id") String id){
+        Customer c = customerRepository.findCustomerById(id);
+        if(c == null){
+            return new ResponseEntity<>("No Customer found", HttpStatus.NOT_FOUND);
+        }else{
+            customerRepository.deleteCustomerById(id);
+            return new ResponseEntity<String>("Customer " + c.getId() + " is deleted.", HttpStatus.OK);
+        }
+    }
 
 }
