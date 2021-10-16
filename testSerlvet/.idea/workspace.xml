@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42b0c991-c73b-4342-b096-0a3801e8c109" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-demo/src/main/java/com/xiaoge/springmvcdemo/Controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-demo/src/main/java/com/xiaoge/springmvcdemo/Controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-demo/src/main/resources/templates/#.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-demo/src/main/resources/templates/#.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-example/src/main/java/com/xiaoge/hibernateexample/Controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hibernate-example/src/main/java/com/xiaoge/hibernateexample/TestJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hibernate-example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-example/src/main/java/com/xiaoge/hibernateexample/POJO/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hibernate-example/src/main/java/com/xiaoge/hibernateexample/POJO/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-example/src/main/java/com/xiaoge/hibernateexample/Repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hibernate-example/src/main/java/com/xiaoge/hibernateexample/Repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hibernate-example/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../hibernate-example/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +153,7 @@
       <workItem from="1632536132512" duration="929000" />
       <workItem from="1632945924453" duration="805000" />
       <workItem from="1632948186270" duration="3613000" />
+      <workItem from="1634347833858" duration="11000" />
     </task>
     <servers />
   </component>
